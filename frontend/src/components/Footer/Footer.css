@@ -1,17 +1,149 @@
 .footer {
-  background-color: #333;
-  color: white;
-  padding: 1rem 0;
-  margin-top: auto;
+  background: #2c2c2c;
+  color: #ccc;
+  padding: 40px 0 20px;
+  margin-top: 50px;
 }
 
-.footer-container {
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 30px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-section h3 {
+  color: #4a90e2;
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.footer-section h4 {
+  color: #4a90e2;
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.footer-section p {
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+  color: #4a90e2;
+}
+
+.contact-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-items p {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-size: 14px;
+}
+
+.contact-icon {
+  margin-right: 10px;
+  color: #e91e63;
+  font-size: 14px;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-btn {
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.social-btn.facebook {
+  background: #4267B2;
+}
+
+.social-btn.instagram {
+  background: #E4405F;
+}
+
+.social-btn.youtube {
+  background: #FF0000;
+}
+
+.social-btn:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+.footer-bottom {
+  border-top: 1px solid #444;
+  padding-top: 20px;
+  text-align: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
-  text-align: center;
 }
 
-.footer p {
+.footer-bottom p {
   margin: 0;
+  color: #999;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .social-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .social-btn {
+    flex: 1;
+    min-width: 100px;
+  }
 }
